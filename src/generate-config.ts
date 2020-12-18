@@ -19,17 +19,18 @@
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
+import { ConfigIniParser } from "config-ini-parser";
 import { promises as fsPromises } from "fs";
 import {
   Connection,
   fetchProjectsPathsRecursively,
   fetchProjectsRpmRepositoryConfigFile,
   isProcessError,
+  rmRf,
   runProcess
 } from "open-build-service-api";
 import { tmpdir } from "os";
 import { join } from "path";
-import { ConfigIniParser } from "config-ini-parser";
 
 function getMainSection(tmpDir: string): string {
   return `[main]
@@ -100,7 +101,6 @@ export async function runRepoclosure(
   const tempdir = await fsPromises.mkdtemp(
     join(tmpdir(), `dnf_repo_${projectName}_${repositoryName}`)
   );
-  console.log(tempdir);
 
   try {
     const confFile = join(tempdir, "dnf.conf");
@@ -122,6 +122,6 @@ export async function runRepoclosure(
     }
     throw err;
   } finally {
-    // await rmRf(tempdir);
+    await rmRf(tempdir);
   }
 }
