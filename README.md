@@ -16,6 +16,8 @@ Usage:
 ```ShellSession
 $ yarn install
 $ yarn run build
+$ EXPORT OBS_USERNAME="your_username"
+$ EXPORT OBS_PASSWORD="your_obs_password" # you might want to unset histfile
 $ node build/bin.js --project $NAME_OF_THE_PROJECT_TO_CHECK --repository $NAME_OF_THE_REPO_TO_CHECK
 ```
 
