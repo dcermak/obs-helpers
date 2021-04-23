@@ -2,22 +2,15 @@
 # yarn lockfile v1
 
 
-"@types/argparse@^2.0.4":
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/@types/argparse/-/argparse-2.0.4.tgz#07a2edc7b5408df134a1bfe6ed7d112e8a5c179e"
-  integrity sha512-nODH1e9muvwytv7/5fGi8kE4lMcUlM+iV26ySWfx66IqLCMu8y36s2QAZkOk0L0DsOEG1+irIp8u6xgINm/0dQ==
+"@types/argparse@>=2.0":
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/@types/argparse/-/argparse-2.0.5.tgz#5192f160931442a32c1c23e9480fff3f8d7cd0e4"
+  integrity sha512-m0CQ4TzFW+JdAN875vqqNO7H92jnN9hrH0bxEjJStePjfSfBDNgIlH+ieZQvBH9CuSPguFpjEzXcJHqV+fJqOQ==
 
-"@types/node@*", "@types/node@^14.14.14":
-  version "14.14.14"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.14.14.tgz#f7fd5f3cc8521301119f63910f0fb965c7d761ae"
-  integrity sha512-UHnOPWVWV1z+VV8k6L1HhG7UbGBgIdghqF3l9Ny9ApPghbjICXkUJSd/b9gOgQfjM1r+37cipdw/HJ3F6ICEnQ==
-
-"@types/nodemailer@^6.4.0":
-  version "6.4.0"
-  resolved "https://registry.yarnpkg.com/@types/nodemailer/-/nodemailer-6.4.0.tgz#d8c039be3ed685c4719a026455555be82c124b74"
-  integrity sha512-KY7bFWB0MahRZvVW4CuW83qcCDny59pJJ0MQ5ifvfcjNwPlIT0vW4uARO4u1gtkYnWdhSvURegecY/tzcukJcA==
-  dependencies:
-    "@types/node" "*"
+"@types/node@>=14.14":
+  version "14.14.41"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.14.41.tgz#d0b939d94c1d7bd53d04824af45f1139b8c45615"
+  integrity sha512-dueRKfaJL4RTtSa7bWeTK1M+VH+Gns73oCgzvYfHZywRCoPSd8EkXBL0mZ9unPTveBn+D9phZBaxuzpwjWkW0g==
 
 argparse@^2:
   version "2.0.1"
@@ -30,9 +23,9 @@ commander@^6.0.0:
   integrity sha512-U7VdrJFnJgo4xjrHpTzu0yrHPGImdsmD95ZlgYSEajAn2JKzDhDTPG9kBTefmObL2w/ngeZnilk+OV9CG3d7UA==
 
 config-ini-parser@^1.3.5:
-  version "1.3.8"
-  resolved "https://registry.yarnpkg.com/config-ini-parser/-/config-ini-parser-1.3.8.tgz#fd64d62079dee4acb2cb8e2a9a38d83e24df8067"
-  integrity sha512-YK8DksS70jpzOl1P1wayJvEmhqR1qyZFvID8CGvpOoZ261YXq0OCliCVch8JBRS10QA1cfJJ+IM98m/i6wgoZQ==
+  version "1.5.9"
+  resolved "https://registry.yarnpkg.com/config-ini-parser/-/config-ini-parser-1.5.9.tgz#17926e58e8c122bce5a8e72c67792861a52ceb2d"
+  integrity sha512-FLAMUunXCqbpEbv/q0v76lLewmZ03LUM4xslsPpZ2IN7/sQUaKfXNoTl8EjOTjlkHgrNzmJ//Y5crgabbIWjfQ==
 
 config-ini@^0.2:
   version "0.2.2"
@@ -46,20 +39,15 @@ iniparser@~1.0.5:
   resolved "https://registry.yarnpkg.com/iniparser/-/iniparser-1.0.5.tgz#836d6befe6dfbfcee0bccf1cf9f2acc7027f783d"
   integrity sha1-g21r7+bfv87gvM8c+fKsxwJ/eD0=
 
-nodemailer@^6.4:
-  version "6.4.17"
-  resolved "https://registry.yarnpkg.com/nodemailer/-/nodemailer-6.4.17.tgz#8de98618028953b80680775770f937243a7d7877"
-  integrity sha512-89ps+SBGpo0D4Bi5ZrxcrCiRFaMmkCt+gItMXQGzEtZVR3uAD3QAQIDoxTWnx3ky0Dwwy/dhFrQ+6NNGXpw/qQ==
-
 "open-build-service-api@https://github.com/SUSE/open-build-service-api.git":
   version "0.0.1"
-  resolved "https://github.com/SUSE/open-build-service-api.git#70f9a23a3a6bca3531b0df60c239946284744851"
+  resolved "https://github.com/SUSE/open-build-service-api.git#6c30a7b42f624c2c3769c6f208a2e99102027517"
   dependencies:
     config-ini-parser "^1.3.5"
     seek-bzip "^2"
     xml2js "^0.4.22"
 
-prettier@^2.2.1:
+prettier@>=2:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.2.1.tgz#795a1a78dd52f073da0cd42b21f9c91381923ff5"
   integrity sha512-PqyhM2yCjg/oKkFPtTGUojv7gnZAoG80ttl45O6x2Ug/rMJw4wcc9k6aaf2hibP7BGVCCM33gZoGjyvt9mm16Q==
@@ -77,9 +65,9 @@ seek-bzip@^2:
     commander "^6.0.0"
 
 typescript@>=4.1:
-  version "4.1.3"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.1.3.tgz#519d582bd94cba0cf8934c7d8e8467e473f53bb7"
-  integrity sha512-B3ZIOf1IKeH2ixgHhj6la6xdwR9QrLC5d1VKeCSY4tvkqhF2eqd9O7txNlS0PO3GrBAFIdr3L1ndNwteUbZLYg==
+  version "4.2.4"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.2.4.tgz#8610b59747de028fda898a8aef0e103f156d0961"
+  integrity sha512-V+evlYHZnQkaz8TRBuxTA92yZBPotr5H+WhQ7bD3hZUndx5tGOa1fuCgeSjxAzM1RiN5IzvadIXTVefuuwZCRg==
 
 xml2js@^0.4.22:
   version "0.4.23"
